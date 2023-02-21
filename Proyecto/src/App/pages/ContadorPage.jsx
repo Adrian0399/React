@@ -25,7 +25,8 @@ export function ContadorPage() {
         </div> */}
       <h1>Vite + React</h1>
 
-      <h3>Valor del count: { count.value }</h3>
+      {/* <h3 >Valor del count: <span className={`span-${count.span}`}>{ count.value }</span></h3> */}
+      <h3 >Valor del count: <span className={count.color}>{ count.value }</span></h3>
 
       <div className="card">
         <button
