@@ -6,22 +6,22 @@ function CustomNavbar() {
   return (
     <>
     <div>
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
+      <ul className="nav justify-content-center">
+        <li className="nav-item">
           <NavLink
             className="nav-link"
             to="/home">
             Inicio
           </NavLink>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <NavLink
             className="nav-link"
             to="/contador">
             Contador
           </NavLink>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <NavLink
             className="nav-link"
             to="/formulario">

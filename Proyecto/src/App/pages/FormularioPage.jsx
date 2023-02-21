@@ -36,9 +36,11 @@ export const FormularioPage = () => {
 
   return (
     
-    <div className="mb-3">
+    <div className="content card card-form">
       <h1>FormularioPage</h1>
-      <form onSubmit={onSubmit}>
+      <form 
+        className="card"
+        onSubmit={onSubmit}>
         <label>
           Nombre:
           <input 
@@ -113,6 +115,7 @@ export const FormularioPage = () => {
         </label>
         <br />
         <button 
+          className="btn btn-primary"
           type="submit" 
         >Guardar</button>
       </form>

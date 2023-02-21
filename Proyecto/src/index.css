@@ -1,15 +1,28 @@
+:root {
+  --color-gris: rgba(221, 221, 221, 0.226);
+}
 
 .nav {
+  max-width: 1900px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 50px; /* ajusta la altura según tus necesidades */
-}
-.nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 50px; /* ajusta la altura según tus necesidades */
-  background-color: rgb(221, 221, 221);
+  background-color: var(--color-gris);
   margin-bottom: 2rem;
 }
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card {
+  padding: 2rem;
+  background-color: var(--color-gris);
+  max-width: 500px;
+}
+
+
+

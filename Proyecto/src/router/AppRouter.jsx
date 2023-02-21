@@ -16,8 +16,6 @@ export const AppRouter = () => {
         <Route path="/formulario" element={ <FormularioPage /> }  />
 
         <Route path="/*" element={ <Navigate to="/home" /> }  />
-
-
           
       </Routes>
 

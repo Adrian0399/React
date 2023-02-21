@@ -14,7 +14,7 @@ export function ContadorPage() {
 
 
   return (
-    <div className="App">
+    <div className="content  card">
         {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="../../assets/react.svg" className="logo" alt="Vite logo" />
@@ -25,11 +25,11 @@ export function ContadorPage() {
         </div> */}
       <h1>Vite + React</h1>
 
-      <p>Valor del count: { count.value }</p>
+      <h3>Valor del count: { count.value }</h3>
 
       <div className="card">
         <button
-          className=' btn btn-outline-success mb-2'
+          className=' btn btn-outline-success mb-2 mt-2'
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
