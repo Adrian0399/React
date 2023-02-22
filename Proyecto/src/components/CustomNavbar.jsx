@@ -1,8 +1,16 @@
 import React from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function CustomNavbar() {
+
+  const navigate = useNavigate();
+
+  const onLogout = () => {
+    navigate('/login', {
+      replace: true
+    });
+  }
+
   return (
     <>
     <div>
@@ -27,6 +35,15 @@ function CustomNavbar() {
             to="/formulario">
             Formulario
           </NavLink>
+        </li>
+        <li className="nav-item">
+          <button
+            onClick={onLogout}
+            className="nav-link"
+            Formulario
+          >
+            Cerrar sesión
+          </button>
         </li>
       </ul>
     </div>

@@ -47,7 +47,7 @@ export const useForm = ( initialForm = {} ) => {
             ...fields
         }
     )
-    }
+}
 
     const onInputBlurValidate = ({ target }) => {
       const { name, value, className,maxLength } = target;
@@ -92,11 +92,11 @@ export const useForm = ( initialForm = {} ) => {
 
 
     const onInputChange = ({ target }) => {
-        const { name, value, /*className, maxLength*/ } = target;
+        const { name, value, className,maxLength } = target;
         let valFinal = value;
-        // if(-1 != maxLength){
-        //   valFinal = value.toString().substr(0,maxLength).trim();
-        // }
+        if(-1 != maxLength){
+          valFinal = value.toString().substr(0,maxLength).trim();
+        }
         setFormState({
             ...formState,
             [ name ]: valFinal

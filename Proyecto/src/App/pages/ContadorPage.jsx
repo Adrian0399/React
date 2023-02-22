@@ -7,7 +7,6 @@ import { counterSlice, decrement, increment, incrementByAmount } from '../../sto
 import { store } from '../../store';
 
 export function ContadorPage() {
-  
 
   const count = useSelector((store) => store.counter)
   const dispatch = useDispatch()
@@ -26,7 +25,7 @@ export function ContadorPage() {
       <h1>Vite + React</h1>
 
       {/* <h3 >Valor del count: <span className={`span-${count.span}`}>{ count.value }</span></h3> */}
-      <h3 >Valor del count: <span className={count.color}>{ count.value }</span></h3>
+      <h3 >Valor del count: <span className={ count.color }>{ count.value }</span></h3>
 
       <div className="card">
         <button

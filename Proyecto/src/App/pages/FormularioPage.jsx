@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux"
-import { NavLink } from "react-router-dom";
+import { useForm } from "../../hooks/useForm";
 import { setFormSlice } from "../../store/slices";
-import { useForm } from "../hooks/useForm";
+
+
 
 export const FormularioPage = () => {
 
@@ -21,8 +23,10 @@ export const FormularioPage = () => {
     apellidoPaterno: "",
     apellidoMaterno: "",
     fechaNac: "",
+    edad: "",
     genero: "",
   });
+
 
   const onSubmit = () => {
     event.preventDefault();
@@ -34,13 +38,17 @@ export const FormularioPage = () => {
     setOn(false); 
   }, [formSlice != null || formSlice != undefined ]);
 
+
   return (
     
     <div className="content card card-form">
+      
       <h1>FormularioPage</h1>
+
       <form 
         className="card"
         onSubmit={onSubmit}>
+
         <label>
           Nombre:
           <input 
@@ -52,7 +60,7 @@ export const FormularioPage = () => {
             hidden={false} 
           />
         </label>
-        <br />
+
         <label>
           Apellido Paterno:
           <input 
@@ -64,7 +72,7 @@ export const FormularioPage = () => {
             hidden={false} 
           />
         </label>
-        <br />
+
         <label>
           Apellido Materno:
           <input 
@@ -76,7 +84,7 @@ export const FormularioPage = () => {
             hidden={false} 
           />
         </label>
-        <br />
+
         <label>
           Fecha de nacimiento:
           <input 
@@ -86,7 +94,7 @@ export const FormularioPage = () => {
             className="form-control" 
           />
         </label>
-        <br />
+        
         <label>
           Edad:
           <input 
@@ -95,10 +103,9 @@ export const FormularioPage = () => {
             required
             type="number"
             className="form-control"
-            hidden={false} 
           />
         </label>
-        <br />
+
         <label>
           Género:
           <select 
@@ -113,14 +120,12 @@ export const FormularioPage = () => {
             <option value="O">Otro</option>
           </select>
         </label>
-        <br />
+        
         <button 
-          className="btn btn-primary"
+          className="btn btn-primary mt-3"
           type="submit" 
         >Guardar</button>
       </form>
-
-
 
     </div>
   )

@@ -1,20 +1,26 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import CustomNavbar from "../../components/CustomNavbar"
-import { ContadorPage } from "../pages/ContadorPage"
-import { Formulario } from "../pages/Formulario"
+import { ContadorPage, FormularioDosPage, FormularioPage, HomePage } from "../pages"
+
 
 
 export const HomeRoutes = () => {
   return (
     <>
+    <CustomNavbar />
       <Routes>
-          <Route path="contador" element={ <ContadorPage />} />
-          <Route path="formulario" element={ <Formulario />} />
+
+        <Route path="/home" element={ <HomePage /> }  />
+
+        {/* App */}
+        <Route path="/contador" element={ <ContadorPage /> }  />
+        <Route path="/formulario" element={ <FormularioPage /> }  />
+        <Route path="/formularioo" element={ <FormularioDosPage />} />
+
+        <Route path="/" element={ <Navigate to="/login" /> }  />
           
-
-          <Route path="/*" element={ <Navigate to="/contador" />} />
-
       </Routes>
+
     </>
   )
 }
