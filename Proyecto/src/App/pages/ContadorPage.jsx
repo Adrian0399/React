@@ -1,30 +1,23 @@
 
 
-import '../../App.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { NavLink } from 'react-router-dom'
-import { counterSlice, decrement, increment, incrementByAmount } from '../../store/slices';
-import { store } from '../../store';
+import '../../App.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import counterSlice, { decrement, increment, incrementByAmount } from '../../store/slices/counterSlice';
+
 
 export function ContadorPage() {
 
-  const count = useSelector((store) => store.counter)
-  const dispatch = useDispatch()
+  const count = useSelector((store) => store.counter);
+  const dispatch = useDispatch();
 
 
   return (
     <div className="content  card">
-        {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="../../assets/react.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={ reactLogo } className="logo react" alt="React logo" />
-        </a>
-        </div> */}
+
       <h1>Vite + React</h1>
 
-      {/* <h3 >Valor del count: <span className={`span-${count.span}`}>{ count.value }</span></h3> */}
+      {/* <h3 >Valor del count: <span className={ count.color }>{ count.value }</span></h3> */}
       <h3 >Valor del count: <span className={ count.color }>{ count.value }</span></h3>
 
       <div className="card">

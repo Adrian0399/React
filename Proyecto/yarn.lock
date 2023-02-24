@@ -176,7 +176,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.19.0"
 
-"@babel/runtime@^7.12.1", "@babel/runtime@^7.17.2", "@babel/runtime@^7.20.7", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.12.1", "@babel/runtime@^7.17.2", "@babel/runtime@^7.18.9", "@babel/runtime@^7.20.7", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.21.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.21.0.tgz#5b55c9d394e5fcf304909a8b00c07dc217b56673"
   integrity sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==
@@ -492,7 +492,7 @@ ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-bootstrap@5.3.0-alpha1:
+bootstrap@5.3.0-alpha1, bootstrap@^5.3.0-alpha1:
   version "5.3.0-alpha1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.0-alpha1.tgz#380629c4367893f02f7879a01ea3ae0f94e2e70e"
   integrity sha512-ABZpKK4ObS3kKlIqH+ZVDqoy5t/bhFG0oHTAzByUdon7YIom0lpCeTqRniDzJmbtcWkNe800VVPBiJgxSYTYew==
@@ -689,6 +689,16 @@ json5@^2.2.2:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
+klu-web-ui@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/klu-web-ui/-/klu-web-ui-0.0.15.tgz#454387fc9d82ec89bd4d7d449cab91277a7000fc"
+  integrity sha512-4EZEyYRXQK6ECTuuihvN0OsbH3nhKqcMEYnuleCtibpvC9f9Imk3AO3ZTK2bvYavqT+Nwoc8IbALXETQidhKGA==
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    bootstrap "^5.3.0-alpha1"
+    react-bootstrap "^2.7.2"
+    react-verification-code-input "^1.2.9"
+
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
@@ -848,6 +858,11 @@ react-transition-group@^4.4.2:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-verification-code-input@^1.2.9:
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/react-verification-code-input/-/react-verification-code-input-1.2.9.tgz#16051396f0c75752aab0cd9f37cb7be7084b98d0"
+  integrity sha512-Fg0B3SGGRoZtZFiQ/8FGSK5MQby9k5ssIUupPLvb8/U++Yxvc0T8ps/7CClLnvN+wowS5oL8xS7vqUTR9fRH6Q==
 
 react@^18.2.0:
   version "18.2.0"

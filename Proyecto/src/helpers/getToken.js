@@ -1,4 +1,5 @@
 import { getAuthenticationToken, getDeviceInfo } from "../helpers";
+
 export const getToken = async () => {
   const deviceInfo = getDeviceInfo();
 

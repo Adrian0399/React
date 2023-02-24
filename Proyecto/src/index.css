@@ -3,14 +3,17 @@
 }
 
 .nav {
-  max-width: 1900px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  height: 50px; /* ajusta la altura según tus necesidades */
+  height: 60px;
   background-color: var(--color-gris);
-  margin-bottom: 2rem;
 }
+
+.nav-item {
+  margin-right: 1rem;
+}
+
 
 .content {
   max-width: 1000px;

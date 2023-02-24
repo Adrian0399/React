@@ -1,4 +1,3 @@
-
 import { Route, Routes, useSearchParams } from "react-router-dom"
 import { HomeRoutes } from "../App/routes/HomeRoutes"
 import { LoginPage, LoginPassword, RegisterPage } from "../auth/pages"
@@ -16,13 +15,13 @@ export const AppRouter = () => {
       <Routes>
 
         <Route
-          path="/*"
+          path="/login/*"
           element={
             <PublicRoute>
               <Routes>
-                <Route path="/*" element={<LoginPage />} />
-                <Route path="/login/pass" element={<LoginPassword />} />
-                <Route path="/login/2fa" element={<Login2fa />} />
+                <Route path="/" element={<LoginPage />} />
+                <Route path="/pass" element={<LoginPassword />} />
+                <Route path="/2fa" element={<Login2fa />} />
                 
                 <Route path="/registro" element={<RegisterPage />} />
                 

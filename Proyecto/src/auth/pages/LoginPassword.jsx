@@ -1,12 +1,14 @@
-import { useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { AuthContext } from "..";
-import { useFetch } from "../../hooks";
-import { useDispatch } from "react-redux";
-import { setLoaderShowState } from "../../store/slices/interactionCenterSlice";
-import { useDeviceInfo } from "../../App/hooks/useDeviceInfo";
+import { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '..';
+import { useFetch } from '../../hooks';
+import { useDispatch } from 'react-redux';
+import { setLoaderShowState } from '../../store/slices/interactionCenterSlice';
+import { useDeviceInfo } from '../../App/hooks/useDeviceInfo';
+import { FormPass } from '../components/login/FormPass';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
+
 
 
 export const LoginPassword = () => {
@@ -18,7 +20,7 @@ export const LoginPassword = () => {
   
     const { deviceInfo } = useDeviceInfo();
   
-    const [passwordView, setPasswordView] = useState(true);
+    // const [passwordView, setPasswordView] = useState(true);
   
     const [tempUserData, setTempUserData] = useState({
       tempName: "",
@@ -28,6 +30,7 @@ export const LoginPassword = () => {
       intentos: 0,
       errorRequest: false,
     });
+
     const { tempName, tempEmail, userPassword, intentos, errorRequest } =
       tempUserData;
   
@@ -56,7 +59,7 @@ export const LoginPassword = () => {
         userId: data.userId,
         sessionId: session.sessionId,
       });
-      navigate("/", {
+      navigate("/login", {
         replace: true,
       });
     }
@@ -98,22 +101,12 @@ export const LoginPassword = () => {
         <h1>
             Bienvenido: {loginViewIsActive?.nameWithPoints}!
         </h1>
-        <h2>Favor de ingresar su contraseña:</h2>
+        <h4>Favor de ingresar su contraseña:</h4>
         
         <form onSubmit={onLogin}>
-            <FloatingLabel
-            controlId="floatingInput"
-            label="Password"
-            className="mb-2"
-            >
-            <Form.Control type="password" placeholder="**********" />
-            </FloatingLabel>
-            <button
-            className="btn btn-secondary login__button login__button--login "
-            type="submit"
-            >
-            Iniciar sesión
-            </button>
+
+          <FormPass />
+          
         </form>
       </div>
 

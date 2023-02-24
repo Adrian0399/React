@@ -1,30 +1,33 @@
-import { NavLink } from "react-router-dom"
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useDashboard } from "../hooks/useDashboard";
+// import { useGetCatalogosGlobables } from "../hooks/useGetCatalogosGlobables";
+import { useSession } from "../hooks/useSession";
 
 export const HomePage = () => {
+
+  const dispatch = useDispatch();
+  const { loginSession } = useDashboard();
+  const time = useSession();
+
+
+  //carga inicial
+  // useGetCatalogosGlobables();
+  // useBanks();
+  // useSendMoneyGetAuthorizersAndNotifiers();
+  //carga inicial
+
+  useEffect(() => {
+    loginSession();
+  }, []);
+
   return (
     <>
 
     <div className="content card">
     <h1>HomePage</h1>  
       <div className="card">
-        <NavLink
-          to="/contador">
-          <button
-            className="btn btn-outline-warning btn-lg mb-2"
-            aria-label="Contador"
-          >
-            Contador
-          </button>
-        </NavLink>
-        <NavLink
-          to="/formulario">
-          <button
-            className="btn btn-outline-warning btn-lg mb-2"
-            aria-label="Contador"
-          >
-            Formulario
-          </button>
-        </NavLink>
+        <h1>Session Id: </h1>
       </div>
     </div>
     </>

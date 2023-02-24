@@ -1,10 +1,11 @@
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
+
 import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
 import { useInteractionCenter } from "../../hooks/useInteractionCenter";
 import { useGeolocation } from "../../store/slices/useGeolocation";
+import { FormEmail } from "../components/login/FormEmail";
+import { GeolocationInfoHome } from "./GeolocationInfoHome";
 
 export const LoginPage = () => {
 
@@ -12,7 +13,7 @@ export const LoginPage = () => {
 
   const { onShowLoader } = useInteractionCenter();
 
-  const URL_HOME_SITE = import.meta.env.VITE_URL_HOME_SITE;
+  // const URL_HOME_SITE = import.meta.env.VITE_URL_HOME_SITE;
 
   const [formEmailState, setFormEmailState] = useState({
     emailForm: "",
@@ -108,9 +109,6 @@ export const LoginPage = () => {
     getGeolocation();
   }, []);
 
-
-
-  
     // const onLogin = () => {
     //   navigate('/', {
     //     replace: true
@@ -123,24 +121,13 @@ export const LoginPage = () => {
       <div className="content card card-form mt-5">
         <h1>Login Page</h1>
         <form onSubmit={onActionForm}>
-        <FloatingLabel
-          controlId="floatingInput"
-          label="Correo"
-          className="mb-2"
-        >
-          <Form.Control type="email" placeholder="name@example.com" />
-        </FloatingLabel>
-        
-        <button
-          type="submit"
-          className="btn btn-primary"  
-          // onClick={ onLogin }
-        >
-          Continuar
-        </button>
+          {geolocationState.activeGeolocation ? (
+            <FormEmail />
+          ) : (
+            <GeolocationInfoHome />
+          )}
         </form>
       </div>
-
 
     </>  
   )

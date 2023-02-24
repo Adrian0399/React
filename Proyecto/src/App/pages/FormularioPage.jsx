@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux"
 import { useForm } from "../../hooks/useForm";
-import { setFormSlice } from "../../store/slices";
+import { setFormSlice } from "../../store/slices/formSlice"; 
 
 
 
