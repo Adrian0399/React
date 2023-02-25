@@ -1,23 +1,22 @@
+
+
 :root {
   --color-gris: rgba(221, 221, 221, 0.226);
 }
 
 body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  background-color: var(--color-gris);
+main {
+  height: 100vh;
+  height: -webkit-fill-available;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
-
-.nav-item {
-  margin-right: 1rem;
-}
-
 
 .content {
   max-width: 1000px;
@@ -46,3 +45,5 @@ span.blue {
 .btn:hover {
   background-color: red;
 }
+
+

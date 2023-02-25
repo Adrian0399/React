@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useSetSessionActivity } from '../App/hooks/useSetSessionActivity';
 import Button from 'react-bootstrap/Button';
@@ -6,13 +6,32 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+import {
+  MDBContainer,
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarToggler,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBBtn,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
+  MDBCollapse,
+} from 'mdb-react-ui-kit';
 
 function CustomNavbar() {
 
   const navigate = useNavigate();
 
   const { onCloseSession } = useSetSessionActivity();
-
+  const [showBasic, setShowBasic] = useState(false);
 
   const onLogout = () => {
     navigate('/login', {
@@ -22,6 +41,8 @@ function CustomNavbar() {
 
   return (
     <>
+
+
     <nav className="navbar navbar-expand-md mb-4">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">

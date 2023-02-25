@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"
-import { useFetch } from "../../hooks/useFetch";
-import { useInteractionCenter } from "../../hooks/useInteractionCenter";
-import { useGeolocation } from "../../store/slices/useGeolocation";
-import { FormEmail } from "../components/login/FormEmail";
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { useFetch, useInteractionCenter } from '../../hooks';
+import { useGeolocation } from '../../store/slices';
+import { FormLoginEmail } from "../components";
 import { GeolocationInfoHome } from "./GeolocationInfoHome";
 
-export const LoginPage = () => {
+export const LoginEmailView = () => {
+
 
   const navigate = useNavigate();
 
@@ -108,26 +108,18 @@ export const LoginPage = () => {
     getGeolocation();
   }, []);
 
-    // const onLogin = () => {
-    //   navigate('/', {
-    //     replace: true
-    //   });
-    // }
-  
-  return (
 
+  return (
     <>
       <div className="content card card-form mt-5">
-        <h1>Login Page</h1>
-        <form onSubmit={onActionForm}>
+        <form onSubmit={onActionForm} >
           {geolocationState.activeGeolocation ? (
-            <FormEmail />
+            <FormLoginEmail />
           ) : (
             <GeolocationInfoHome />
           )}
         </form>
       </div>
-
-    </>  
+    </>
   )
 }
