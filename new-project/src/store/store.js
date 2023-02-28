@@ -5,6 +5,7 @@ import interactionCenterSlice from "../store/slices/interactionCenterSlice";
 import userData from "./slices/userData";
 import counterSlice from "./slices/counterSlice";
 import profileSlice from "../store/slices/profileSlice";
+import formSlice from "./slices/formSlice";
 
 
 export const store = configureStore({
@@ -14,5 +15,7 @@ export const store = configureStore({
         userData,
         counter: counterSlice,
         profileSlice,
+        formSlice,
+        
     },
 }) ;

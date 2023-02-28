@@ -1,9 +1,11 @@
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
+import CustomNavbar from '../../components/CustomNavbar';
 
 export const FormularioDosPage = () => {
     return (
         <>
+        <CustomNavbar />
         <div className="content card card-form">
           <FloatingLabel
             controlId="floatingInput"

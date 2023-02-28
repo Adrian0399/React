@@ -111,7 +111,7 @@ export const LoginEmailView = () => {
 
   return (
     <>
-      <div className="content card card-form mt-5">
+      <div className="form__login">
         <form onSubmit={onActionForm} >
           {geolocationState.activeGeolocation ? (
             <FormLoginEmail />

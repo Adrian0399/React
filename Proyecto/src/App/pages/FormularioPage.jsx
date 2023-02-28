@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux"
+import CustomNavbar from "../../components/CustomNavbar";
 import { useForm } from "../../hooks/useForm";
 import { setFormSlice } from "../../store/slices/formSlice"; 
 
@@ -40,7 +41,8 @@ export const FormularioPage = () => {
 
 
   return (
-    
+  <>
+    <CustomNavbar />
     <div className="content card card-form">
       
       <h1>FormularioPage</h1>
@@ -128,5 +130,6 @@ export const FormularioPage = () => {
       </form>
 
     </div>
+  </>
   )
 }

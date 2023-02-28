@@ -4,6 +4,7 @@ import '../../App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import counterSlice, { decrement, increment, incrementByAmount } from '../../store/slices/counterSlice';
+import CustomNavbar from '../../components/CustomNavbar';
 
 
 export function ContadorPage() {
@@ -13,6 +14,8 @@ export function ContadorPage() {
 
 
   return (
+    <>
+    <CustomNavbar />
     <div className="content  card">
 
       <h1>Vite + React</h1>
@@ -56,6 +59,7 @@ export function ContadorPage() {
         Click on the Vite and React logos to learn more
       </p>
     </div>
+    </>
   )
 }
 

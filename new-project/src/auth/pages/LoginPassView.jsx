@@ -93,10 +93,7 @@ export const LoginPassView = () => {
 
   return (
     <>
-      <div className="content card card-form mt-5">
-          {/* <h1>
-            Bienvenido: {loginViewIsActive?.nameWithPoints}!
-          </h1> */}
+      <div className="form__login">
         <form onSubmit={onLogin}>
           <FormLoginPass nameWithPoints={loginViewIsActive?.nameWithPoints} />
         </form>

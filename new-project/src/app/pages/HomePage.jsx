@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { CustomNavbar } from "../../components/CustomNavbar";
 import { useSession } from "../hooks";
 import { useDashboard } from "../hooks/useDashboard";
 
@@ -22,9 +23,10 @@ export const HomePage = () => {
 
   return (
     <>
-    <main class="d-flex flex-nowrap">
-      <h1>HomePage</h1>
-    </main>
+      <CustomNavbar />
+      <div className="content"> 
+        <h1>HomePage</h1>
+      </div>
       
     </>
   )

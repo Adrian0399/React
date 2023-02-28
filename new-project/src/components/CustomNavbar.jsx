@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
+// import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+// import "@fortawesome/fontawesome-free/css/all.min.css";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useSetSessionActivity } from '../App/hooks/useSetSessionActivity';
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import "@fortawesome/fontawesome-free/css/all.min.css";
 
 
-function CustomNavbar() {
 
-  const navigate = useNavigate();
 
-  const { onCloseSession } = useSetSessionActivity();
-  const [showBasic, setShowBasic] = useState(false);
+export const CustomNavbar = () => {
 
-  const onLogout = () => {
-    navigate('/login', {
-      replace: true
-    });
-  }
+    const navigate = useNavigate();
+
+    const { onCloseSession } = useSetSessionActivity();
+    const [showBasic, setShowBasic] = useState(false);
+
+    const onLogout = () => {
+        navigate('/login', {
+        replace: true
+        });
+    }
 
   return (
     <>
@@ -40,7 +42,7 @@ function CustomNavbar() {
           
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 mt-2">
             <li className="nav-item">
               <NavLink className="nav-link" to="../home">
                 Inicio
@@ -56,6 +58,11 @@ function CustomNavbar() {
                 Formulario
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="../klu">
+                KLU
+              </NavLink>
+            </li>
           </ul>
           <button
             type="submit"
@@ -67,43 +74,6 @@ function CustomNavbar() {
         </div>
       </div>
     </nav>
-
-
-    {/* <div>
-      <ul className="nav">
-        <li className="nav-item">
-          <NavLink
-            className="nav-link"
-            to="home">
-            Inicio
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink
-            className="nav-link"
-            to="contador">
-            Contador
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink
-            className="nav-link"
-            to="/formulario">
-            Formulario
-          </NavLink>
-        </li>
-          <li className="nav-link ml-auto">
-            <button
-              onClick={() => onCloseSession()}
-              className="btn btn-outline-danger"
-            >
-              Cerrar sesión
-            </button>
-          </li>
-      </ul>
-    </div> */}
     </>
-  );
+  )
 }
-
-export default CustomNavbar;
