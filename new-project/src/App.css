@@ -190,7 +190,7 @@ span.blue {
 }
 
 .main-content__button {
-  background-color: var(--color-buttons);
+  background-color: var(--color-blanco);
   border: none;
   border-radius: 4px;
   color: var(--color-title);
@@ -199,6 +199,11 @@ span.blue {
   width: 300px;
   height: 60px;
 }
+
+.main-content__button.active {
+  background-color: var(--color-buttons);
+}
+
 
 .main-content__button svg {
   margin-right: 13px;
