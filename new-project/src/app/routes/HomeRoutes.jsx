@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { ContadorPage, FormularioPage, HomePage } from "../pages"
-import { KluPage } from "../pages/KluPage"
+
+import { ContadorPage, FormularioPage, HomePage, TarjetasCorporativas } from "../pages"
 
 
 export const HomeRoutes = () => {
@@ -15,7 +15,7 @@ export const HomeRoutes = () => {
         {/* App */}
         <Route path="contador" element={ <ContadorPage /> }  />
         <Route path="formulario" element={ <FormularioPage /> }  />
-        <Route path="klu" element={ <KluPage /> }  />
+        <Route path="klu" element={ <TarjetasCorporativas /> }  />
 
         <Route path="/" element={ <Navigate to="/login" /> }  />
 

@@ -89,6 +89,19 @@ span.blue {
 
 /* -- Header -- */
 
+.btn-yellow {
+
+}
+
+.label-input {
+  
+}
+
+.input-form {
+
+}
+
+
 .header {
   position: fixed;
   top: 0;
@@ -436,3 +449,45 @@ span.blue {
   color: var(--color-label);
 }
 
+
+
+
+
+/* Mis Tarjetas */
+
+
+.cardsView__field {
+  margin-top: 40px;
+  
+}
+
+.cardsView__label {
+  margin-bottom: 5px;
+}
+
+.cardsView__input {
+  width: 300px;
+  height: 40px;
+  margin-right: 10px;
+  margin: 0 40px 0 0 ;
+}
+
+.cardsView__assign {
+  
+  height: 50px;
+}
+
+.cardsView__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardsView__button--filtro {
+  width: 180px;
+  height: 40px;
+}
+
+.cardsView__button--asignar {
+  width: 300px;
+  height: 40px;
+}
