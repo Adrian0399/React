@@ -16,7 +16,6 @@ export const TarjetasCorporativasView = () => {
     setSelectedView('SolicitudesView');
   };
 
-
   return (
     <>
     <div className="main-content">

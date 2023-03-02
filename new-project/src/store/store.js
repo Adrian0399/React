@@ -7,7 +7,6 @@ import counterSlice from "./slices/counterSlice";
 import profileSlice from "../store/slices/profileSlice";
 import formSlice from "./slices/formSlice";
 
-
 export const store = configureStore({
     reducer: {
         backExpired,
@@ -16,6 +15,7 @@ export const store = configureStore({
         counter: counterSlice,
         profileSlice,
         formSlice,
+
         
     },
 }) ;

@@ -234,10 +234,10 @@ span.blue {
   font-size: 13px;
   line-height: 15.85px;
   font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .main-content__input {
-  margin-top: 8px;
   width: 100%;
   height: 40px;
   border-radius: 4px;
@@ -451,7 +451,6 @@ span.blue {
 
 .cardsView__field {
   margin-top: 40px;
-  
 }
 
 .cardsView__label {
@@ -483,4 +482,78 @@ span.blue {
 .cardsView__button--asignar {
   width: 300px;
   height: 40px;
+}
+
+.table__icons {
+  display: flex;
+  margin: 15px 0;
+  justify-content: space-between;
+}
+
+
+
+
+/* DIV TABLA */
+
+.content__div-table {
+  margin-top: 6px;
+  max-width: 100%;
+  padding: 20px;
+  width: 100%;
+  grid-column: 1/-1;
+}
+
+.main-content__div-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.main-content__div-column {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.main-content__div-column:nth-child(2) {
+  border-left: 2px solid var(--color-border-table);
+}
+
+.main-content__div-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-content__div-full-width {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.div__saldo {
+  background-color: red;
+}
+
+.content__div-table--title {
+  margin-top: 30px;
+}
+
+.content__div-table--input {
+  max-width: 300px;
+  max-height: 40px;
+}
+
+.content__div-table--btn {
+  max-width: 160px;
+  max-height: 40px;
+}
+
+.asignar-saldo__btn,
+.main-content__input--newcard {
+  margin-right: 30px;
+}
+
+.div-column__secondary {
+  margin-left: 40px;
 }
