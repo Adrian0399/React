@@ -1,7 +1,26 @@
+import { useState } from "react";
+import { CardMenu } from "../MisTarjetas/CardMenu";
+import { ProgressSolicitud } from "../MisTarjetas/ProgressSolicitud";
 import { Paginador } from "../Paginador"
 
 
 export const MisSolicitudes = () => {
+
+    const [changeIcon, setChangeIcon] = useState('down.svg') //Estado del icono inicial
+    const [showDiv, setShowDiv] = useState(false);
+
+
+    function cambiarIcono() {
+        if (changeIcon === 'down.svg') {
+            setChangeIcon('down1.svg');
+            setShowDiv(true);
+        } else {
+            setChangeIcon('down.svg');
+            setShowDiv(false);
+        }
+    }
+
+
   return (
     <>
     <div class="main-content-secondary">
@@ -17,57 +36,32 @@ export const MisSolicitudes = () => {
                         <th>Nombre</th>
                         <th>Correo</th>
                         <th>Número de tarjetas</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                <tr>
                         <td>Solicitud 1</td>
                         <td>Nombre 1</td>
                         <td>correo1@example.com</td>
-                        <td>5,000</td>                
+                        <td>5,000</td>       
+                        <td>
+                            <a className="icons__pointer" onClick={cambiarIcono}>
+                                <img src={`src/assets/images/icons/${changeIcon}`} alt="" />
+                            </a>    
+                        </td>         
                     </tr>
-                    <tr>
-                        <td>Solicitud 2</td>
-                        <td>Nombre 2</td>
-                        <td>correo2@example.com</td>
-                        <td>20,000</td>                
-                    </tr>
-                    <tr>
-                        <td>Solicitud 3</td>
-                        <td>Nombre 3</td>
-                        <td>correo3@example.com</td>
-                        <td>2,500</td>                
-                    </tr>
-                    <tr>
-                        <td>Solicitud 4</td>
-                        <td>Nombre 4</td>
-                        <td>correo4@example.com</td>
-                        <td>2,000</td>                
-                    </tr>
-                    <tr>
-                        <td>Solicitud 5</td>
-                        <td>Nombre 5</td>
-                        <td>correo5@example.com</td>
-                        <td>2,000</td>                
-                    </tr>
-                    <tr>
-                        <td>Solicitud 6</td>
-                        <td>Nombre 6</td>
-                        <td>correo6@example.com</td>
-                        <td>2,000</td>                
-                    </tr>
-                    <tr>
-                        <td>Solicitud 7</td>
-                        <td>Nombre 7</td>
-                        <td>correo7@example.com</td>
-                        <td>2,000</td>                
-                    </tr>
-                    <tr>
-                        <td>Solicitud 8</td>
-                        <td>Nombre 8</td>
-                        <td>correo8@example.com</td>
-                        <td>2,000</td>                
-                    </tr>
+                    
+                    {showDiv && (
+                        <tr>
+                            <td colSpan="5">
+                                <div>
+                                    <ProgressSolicitud />
+                                </div>
+                            </td>
+                        </tr>
+                    )}
+            
                 </tbody>
                 
             </table>

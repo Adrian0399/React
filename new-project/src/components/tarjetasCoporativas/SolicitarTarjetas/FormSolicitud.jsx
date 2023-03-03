@@ -1,3 +1,4 @@
+import { InputGroup } from "react-bootstrap"
 
 
 export const FormSolicitud = () => {
@@ -18,8 +19,10 @@ export const FormSolicitud = () => {
 
                 <div className="main-content__form-row">
                     <label for="nombre-completo" className="main-content__label">Número de teléfono:</label>
-                    <input type="tel" id="numero-telefono" className="main-content__input" placeholder="55 1234 5678"/>
-                </div>              
+                    <div class="input-container" placeholder="+52">
+                        <input type="tel" id="numero-telefono" className="main-content__input input--tel" placeholder="55 1234 5678" />
+                    </div>
+                </div>            
                 
                 <div className="main-content__form-row">
                     <label for="correo" className="main-content__label">Correo:</label>

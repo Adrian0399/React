@@ -1,4 +1,5 @@
-
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 export const CardMenu = () => {
   return (
@@ -10,14 +11,14 @@ export const CardMenu = () => {
             <div className="main-content__div-column">
                 <label for="numero-tarjetas" className="main-content__label">Asignar saldo</label>
                 <div className="main-content__div-container">
-                    <input type="number" id="numero-tarjetas" className="main-content__input content__div-table--input" placeholder="100"/>
+                    <input type="number" id="numero-tarjetas" className="main-content__input content__div-table--input" placeholder="MXN $ 1,234.00"/>
                     <button className="main-content__button main-content__button--submit content__div-table--btn asignar-saldo__btn">Confirmar</button>
                 </div>
             </div>
             <div className="main-content__div-column">
                 <label for="numero-tarjetas" className="main-content__label div-column__secondary">Quitar saldo</label>
                 <div className="main-content__div-container">
-                    <input type="number" id="numero-tarjetas" className="main-content__input content__div-table--input div-column__secondary" placeholder="100"/>
+                    <input type="number" id="numero-tarjetas" className="main-content__input content__div-table--input div-column__secondary" placeholder="MXN $ 1,234.00"/>
                     <button className="main-content__button main-content__button--submit content__div-table--btn div-column__secondary">Confirmar</button>
                 </div>
             </div>
@@ -27,13 +28,13 @@ export const CardMenu = () => {
             <div className="main-content__div-column">
                 <label for="numero-tarjetas" className="main-content__label">Nueva tarjeta</label>
                 <div className="main-content__div-container">
-                    <input type="number" id="numero-tarjetas" className="main-content__input main-content__input--newcard" placeholder="100"/>
+                    <input type="number" id="numero-tarjetas" className="main-content__input main-content__input--newcard" placeholder="1234 5678 1234 5678"/>
                 </div>
             </div>
             <div className="main-content__div-column">
                 <label for="numero-tarjetas" className="main-content__label div-column__secondary">Confirma tu tarjeta</label>
                 <div className="main-content__div-container">
-                    <input type="number" id="numero-tarjetas" className="main-content__input content__div-table--input div-column__secondary" placeholder="100"/>
+                    <input type="number" id="numero-tarjetas" className="main-content__input content__div-table--input div-column__secondary" placeholder="1234 5678 1234 5678"/>
                     <button className="main-content__button main-content__button--submit content__div-table--btn div-column__secondary">Confirmar</button>
                 </div>
             </div>
